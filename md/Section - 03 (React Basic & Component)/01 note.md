@@ -18,7 +18,7 @@ because all user interfaces in the end are made of with components
 
 component is a JavaScript function or class that return (JSX) html, css, js
 
-![img](./img/component.png)
+![img](./img/react-component-workflow.png)
 
 #### why component
 
