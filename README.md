@@ -2,7 +2,9 @@
 
 # Learn React
 
-## Date - 30/5/22
+## Date - 30/5/22 (course starting date)
+
+## ? (finished date)
 
 this is repository there i learn react from scratch by a Udemy course and the instructor name is Maximilian Schwarzmüller,
 
