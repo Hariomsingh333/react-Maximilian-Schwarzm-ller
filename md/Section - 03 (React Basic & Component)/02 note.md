@@ -1,10 +1,10 @@
 # let's build a component
 
-component is nothing just a function
+component is nothing just a function, That return jsx, or html css js
 
 ```jsx
 const Hello = () => {
-  return <div>Hello World from the Hello Component</div>;
+  return <div>Hello World from the Hello Component{5 + 6}</div>;
 };
 
 export default Hello;
@@ -26,3 +26,7 @@ const App = () => {
 
 export default App;
 ```
+
+# Props
+
+in react we have a concept called props, props full name is property.
