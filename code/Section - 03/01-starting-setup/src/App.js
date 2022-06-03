@@ -27,7 +27,7 @@ const App = () => {
   ];
   return (
     <div>
-      hello world
+      {/* hello world */}
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
