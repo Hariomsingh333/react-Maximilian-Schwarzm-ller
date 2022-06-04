@@ -5,6 +5,9 @@ import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem = (props) => {
   // const date = new Date();
+  let handleClick = () => {
+    console.log("button is clicked");
+  };
   return (
     <Card className="expense-item">
       <div className="">
@@ -14,6 +17,7 @@ const ExpenseItem = (props) => {
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
+      <button onClick={handleClick}>Title Change</button>
     </Card>
   );
 };
