@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ExpenseForm = () => {
   let date = new Date();
   let handleSubmit = (e) => {
     e.preventDefault();
+    console.log(`title : ${title},amount: ${amount}, Date: ${currentDate}`);
+  };
+
+  const [title, settitle] = useState("");
+  const [amount, setamount] = useState(0);
+  const [currentDate, setDate] = useState("");
+
+  const titleChange = (e) => {
+    settitle(e.target.value);
+  };
+  const amountChange = (e) => {
+    setamount(e.target.value);
+  };
+  const DateChange = (e) => {
+    setDate(e.target.value);
   };
   return (
     <div>
@@ -12,19 +27,35 @@ const ExpenseForm = () => {
           <div className="new-expense__control">
             <label htmlFor="title">
               Title:
-              <input type="text" id="title" />
+              <input
+                type="text"
+                id="title"
+                value={title}
+                onChange={titleChange}
+              />
             </label>
           </div>
           <div className="new-expense__control">
             <label htmlFor="amount">
               Amount:
-              <input type="number" id="amount" />
+              <input
+                type="number"
+                id="amount"
+                value={amount}
+                onChange={amountChange}
+              />
             </label>
           </div>
           <div className="new-expense__control">
             <label htmlFor="date">
               Date:
-              <input type="date" min={date} id="amount" />
+              <input
+                type="date"
+                min={date}
+                id="amount"
+                value={currentDate}
+                onChange={DateChange}
+              />
             </label>
           </div>
         </div>
