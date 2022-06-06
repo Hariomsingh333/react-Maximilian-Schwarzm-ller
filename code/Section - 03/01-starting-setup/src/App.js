@@ -1,5 +1,6 @@
 import React from "react";
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./components/Expense/ExpenseItem";
+import NewExpense from "./components/Form/NewExpense";
 // import Test from "./components/Test";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <div>
       {/* hello world */}
+      <NewExpense />
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
@@ -48,8 +50,7 @@ const App = () => {
         amount={expenses[3].amount}
         date={expenses[3].date}
       />
-      {/* <Test text={`this is a text from props`} /> */}
-    </div>
+      </div>
   );
 };
 
