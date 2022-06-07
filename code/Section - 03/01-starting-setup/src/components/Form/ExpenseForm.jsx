@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   let date = new Date();
   let handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`title : ${title},amount: ${amount}, Date: ${currentDate}`);
+    const data = {
+      title: title,
+      amount: amount,
+      date: currentDate,
+    };
+    // console.log(`title : ${title},amount: ${amount}, Date: ${currentDate}`);
+    // give the data to NewExpense component
+    props.onSaveExpenseForm(data);
     settitle("");
     setamount(0);
     setDate("");
