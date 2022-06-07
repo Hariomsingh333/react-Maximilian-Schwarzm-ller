@@ -5,6 +5,9 @@ const ExpenseForm = () => {
   let handleSubmit = (e) => {
     e.preventDefault();
     console.log(`title : ${title},amount: ${amount}, Date: ${currentDate}`);
+    settitle("");
+    setamount(0);
+    setDate("");
   };
 
   const [title, settitle] = useState("");
