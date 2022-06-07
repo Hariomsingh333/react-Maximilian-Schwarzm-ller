@@ -26,10 +26,18 @@ const App = () => {
       date: new Date(),
     },
   ];
+
+  // take the data from NewExpense component
+  const newExpenseData = (newExpenseData) => {
+    const ExpenseData = {
+      ...newExpenseData,
+    };
+    console.log(ExpenseData);
+  };
   return (
     <div>
       {/* hello world */}
-      <NewExpense />
+      <NewExpense ExpenseDataHandler={newExpenseData} />
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
@@ -50,7 +58,7 @@ const App = () => {
         amount={expenses[3].amount}
         date={expenses[3].date}
       />
-      </div>
+    </div>
   );
 };
 
