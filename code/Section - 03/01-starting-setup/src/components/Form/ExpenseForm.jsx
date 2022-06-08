@@ -7,7 +7,7 @@ const ExpenseForm = (props) => {
     const data = {
       title: title,
       amount: amount,
-      date: currentDate,
+      date: new Date(currentDate),
     };
     // console.log(`title : ${title},amount: ${amount}, Date: ${currentDate}`);
     // give the data to NewExpense component
