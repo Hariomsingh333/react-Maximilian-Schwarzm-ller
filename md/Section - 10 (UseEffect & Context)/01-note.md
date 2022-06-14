@@ -44,3 +44,16 @@ useEffect(() => {
   console.log("this is your" + name);
 }, [name]);
 ```
+
+```jsx
+// follow the same rule,expect this will unmounting on a component
+useEffect(() => {
+  console.log("this is your" + name);
+
+  return () => {
+    // when the code unmount, this cleanup code run
+  };
+}, [name]);
+```
+
+and every single useEffect hooks also fire when the first render, that is rule of thumb
