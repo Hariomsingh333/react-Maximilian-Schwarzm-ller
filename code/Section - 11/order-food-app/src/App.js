@@ -1,7 +1,13 @@
+import React, { Fragment } from "react";
 import "./App.css";
+import Header from "./components/Layout/Header";
 
 function App() {
-  return <div className="App">hello world, this is food order app</div>;
+  return (
+    <Fragment className="App">
+      <Header />
+    </Fragment>
+  );
 }
 
 export default App;
