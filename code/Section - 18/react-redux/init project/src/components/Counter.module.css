@@ -21,3 +21,6 @@
   margin: 2rem 0;
   font-weight: bold;
 }
+main > button {
+  margin: 1rem;
+}
