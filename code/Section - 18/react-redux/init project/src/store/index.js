@@ -9,7 +9,7 @@ const counterReducer = (state = { counter: 0 }, action) => {
     case "RESET":
       return { counter: 0 };
     case "BY5":
-      return { counter: state.counter + 5 };
+      return { counter: state.counter + action.payload };
     default:
       return state;
   }

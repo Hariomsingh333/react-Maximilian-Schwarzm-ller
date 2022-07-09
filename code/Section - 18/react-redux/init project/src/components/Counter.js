@@ -16,7 +16,7 @@ const Counter = () => {
     dispatch({ type: "RESET" });
   };
   const incrementHandlerby5 = () => {
-    dispatch({ type: "BY5" });
+    dispatch({ type: "BY5", payload: 5 });
   };
   return (
     <main className={classes.counter}>
