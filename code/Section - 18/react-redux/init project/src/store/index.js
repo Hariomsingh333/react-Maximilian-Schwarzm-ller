@@ -4,7 +4,7 @@ const { createStore } = require("redux");
 
 const initialState = { counter: 0, showCounter: true };
 const counterSlice = createSlice({
-  name: "counter",
+  name: "Namecounter",
   initialState,
   reducers: {
     increment(state) {
@@ -19,6 +19,9 @@ const counterSlice = createSlice({
     },
     toggleCounter(state) {
       state.showCounter = !state.showCounter;
+    },
+    reset(state) {
+      state.counter = 0;
     },
   },
 });
@@ -53,5 +56,8 @@ const counterSlice = createSlice({
 // const store = createStore(counterSlice.reducer);
 
 // take many reducer
-const store = configureStore({ reducer: { counter: counterSlice } });
+const store = configureStore({
+  reducer: { counterReducer: counterSlice.reducer },
+});
+export const counterActions = counterSlice.actions;
 export default store;
